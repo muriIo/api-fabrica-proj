@@ -24,8 +24,10 @@
 
 ## Description
 
-Á você que vá usar essa api a documentação foi feita pelo postman (para acessar clique [aqui](https://documenter.getpostman.com/view/18392643/UVCBA4e1)).
-Qualquer dúvida entre em contate comigo por [aqui](https://wa.me/5515991711317)
+```bash
+If you are going to use this API, know that the documentation was made on Postman (go to it clicking [here](https://documenter.getpostman.com/view/18392643/UVCBA4e1)).
+To any further questions, contact me [here](https://wa.me/5515991711317).
+```
 
 ## Installation
 
