@@ -24,10 +24,8 @@
 
 ## Description
 
-```bash
 If you are going to use this API, know that the documentation was made on Postman (go to it clicking [here](https://documenter.getpostman.com/view/18392643/UVCBA4e1)).
 To any further questions, contact me [here](https://wa.me/5515991711317).
-```
 
 ## Installation
 
