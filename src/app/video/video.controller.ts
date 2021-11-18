@@ -1,8 +1,10 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, UseGuards } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
 import { Video } from './video';
 import { VideoService } from './video.service';
 
 @Controller('video')
+@UseGuards(AuthGuard('jwt'))
 export class VideoController {
     constructor(private readonly videoService: VideoService) { }
 
