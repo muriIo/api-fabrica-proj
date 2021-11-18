@@ -24,7 +24,8 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Á você que vá usar essa api a documentação foi feita pelo postman (para acessar clique [aqui](https://documenter.getpostman.com/view/18392643/UVCBA4e1)).
+Qualquer dúvida entre em contate comigo por [aqui](https://wa.me/5515991711317)
 
 ## Installation
 
