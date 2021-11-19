@@ -6,4 +6,5 @@ export class User extends Document {
     password: String;
     cpf: String;
     cel: String;
+    type: String;
 }

@@ -25,7 +25,8 @@ export class UserService {
             email: user.email,
             password: hashSync(user.password),
             cpf: user.cpf,
-            cel: user.cel
+            cel: user.cel,
+            type: user.type
         };
 
 
@@ -39,7 +40,8 @@ export class UserService {
             email: user.email,
             password: hashSync(user.password),
             cpf: user.cpf,
-            cel: user.cel
+            cel: user.cel,
+            type: user.type
         };
 
         await this.userModel.findByIdAndUpdate({ _id: id }, final).exec();
