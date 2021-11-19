@@ -1,6 +1,19 @@
-import { Schema } from "mongoose";
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose"
+import { Types } from "mongoose"
 
-export const VideoSchema = new Schema({
-    description: String,
-    link: String
-});
+
+
+@Schema()
+export class Video {
+
+    @Prop()
+    description: String;
+
+    @Prop()
+    link: String;
+
+    @Prop()
+    createdAt: Date;
+}
+
+export const VideoSchema = SchemaFactory.createForClass(Video);

@@ -8,11 +8,11 @@ export class CourseService {
     constructor(@InjectModel('Course') private readonly courseModel: Model<Course>) { }
 
     async getAll() {
-        return await this.courseModel.find().exec();
+        return await this.courseModel.find().populate('videos', null, 'Video').exec();
     }
 
     async getById(id: String) {
-        return await this.courseModel.findById(id).exec();
+        return await this.courseModel.findById(id).populate('videos', null, 'Video').exec();
     }
 
     async create(course: Course) {
