@@ -1,4 +1,5 @@
 import { Document } from 'mongoose';
+import { Course } from '../schemas/course.schema';
 
 export class User extends Document {
     name: String;
@@ -7,4 +8,5 @@ export class User extends Document {
     cpf: String;
     cel: String;
     type: String;
+    courses: Course[];
 }

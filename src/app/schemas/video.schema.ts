@@ -1,7 +1,4 @@
-import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose"
-import { Types } from "mongoose"
-
-
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 
 @Schema()
 export class Video {
@@ -11,9 +8,8 @@ export class Video {
 
     @Prop()
     link: String;
-
-    @Prop()
-    createdAt: Date;
 }
 
 export const VideoSchema = SchemaFactory.createForClass(Video);
+
+VideoSchema.set('timestamps', true);

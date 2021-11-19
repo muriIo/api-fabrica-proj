@@ -1,10 +1,28 @@
-import { Schema } from 'mongoose';
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose"
+import { Types } from "mongoose";
+import { Course } from "./course.schema";
 
-export const UserSchema = new Schema({
-    name: String,
-    email: String,
-    password: String,
-    cpf: String,
-    cel: String,
-    type: String
-});
+@Schema()
+export class User {
+    @Prop()
+    email: String;
+
+    @Prop()
+    password: String;
+
+    @Prop()
+    cpf: String;
+
+    @Prop()
+    cel: String;
+
+    @Prop()
+    type: String;
+
+    @Prop({ type: [Types.ObjectId], ref: Course.name })
+    courses: Course[];
+}
+
+export const UserSchema = SchemaFactory.createForClass(User);
+
+UserSchema.set('timestamps', true);

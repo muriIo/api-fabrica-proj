@@ -12,11 +12,11 @@ export class UserService {
     constructor(@InjectModel('User') private readonly userModel: Model<User>) { }
 
     async getAll() {
-        return await this.userModel.find({}).select("-password").exec();
+        return await this.userModel.find({}).select("-password").populate('courses', null, 'Course').exec();
     }
 
     async getByEmail(email: String) {
-        return await this.userModel.findOne({ email: email }).exec();
+        return await this.userModel.findOne({ email: email }).populate('courses', null, 'Course').exec();
     }
 
     async create(user: User) {
@@ -26,7 +26,8 @@ export class UserService {
             password: hashSync(user.password),
             cpf: user.cpf,
             cel: user.cel,
-            type: user.type
+            type: user.type,
+            courses: user.courses
         };
 
 
@@ -41,7 +42,8 @@ export class UserService {
             password: hashSync(user.password),
             cpf: user.cpf,
             cel: user.cel,
-            type: user.type
+            type: user.type,
+            courses: user.courses
         };
 
         await this.userModel.findByIdAndUpdate({ _id: id }, final).exec();
