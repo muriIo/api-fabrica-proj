@@ -28,7 +28,6 @@ export class AuthService {
         try {
             user = await this.userService.getByEmail(email);
 
-            console.log(user);
             if (user.password == null) {
                 return null
             }
